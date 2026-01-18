@@ -35,6 +35,9 @@
             '.popup-plugin-card {',
             '  max-width: 420px;',
             '  width: calc(100% - 40px);',
+            '  max-height: calc(100vh - 60px);',
+            '  display: flex;',
+            '  flex-direction: column;',
             '  background: var(--color-main);',
             '  color: var(--color-text);',
             '  border: 2px solid var(--color-3);',
@@ -68,6 +71,8 @@
             '  border-radius: 12px;',
             '  padding: 12px;',
             '  margin-bottom: 16px;',
+            '  overflow-y: auto;',
+            '  max-height: calc(100vh - 260px);',
             '}',
             '.popup-plugin-actions {',
             '  display: flex;',
@@ -105,7 +110,7 @@
 
         var titleBar = document.createElement('div');
         titleBar.className = 'popup-plugin-titlebar';
-        titleBar.textContent = popupTitle || 'Announcement';
+        titleBar.textContent = popupTitle || 'Notice';
 
         var messageBox = document.createElement('div');
         messageBox.className = 'popup-plugin-message-box';
